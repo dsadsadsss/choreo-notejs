@@ -15,9 +15,7 @@ NEZHA_PORT=${NEZHA_PORT:-'443'}
 NEZHA_TLS=${NEZHA_TLS:-'1'}
 TLS=${NEZHA_TLS:+'--tls'}
 #以上是全部参数设置，下面为程序处理部分
-sed -i "s/PORT/$PORT/g" /sr/nginx.conf
-mv -f /sr/nginx.conf /etc/nginx/nginx.conf
-nohup /usr/sbin/nginx -g 'daemon off;' >/dev/null 2>&1 &
+
 if [[ -n "${NEZHA_SERVER}" && -n "${NEZHA_KEY}" ]]; then
 [ ! -e /tmp/nezha-agent ] && curl -LJo /tmp/nezha-agent_linux_amd64.zip https://${URL_NEZHA}
 cd /tmp/ && unzip -o /tmp/nezha-agent_linux_amd64.zip
@@ -66,8 +64,6 @@ fi
 }
 check_bot /tmp/bot
 sleep 10
-check_nginx /usr/sbin/nginx -g
-sleep 10
 check_cf /tmp/cf tunnel --edge-ip-version auto run --token
 sleep 10
 check_nezha /tmp/nezha-agent -s ${NEZHA_SERVER}:${NEZHA_PORT}
@@ -97,8 +93,7 @@ nohup /usr/sbin/nginx -g 'daemon off;' >/dev/null 2>&1 &
 fi
 }
 check_bot /tmp/bot
-sleep 10
-check_nginx /usr/sbin/nginx -g
+
 sleep 10
 check_cf /tmp/cf tunnel --edge-ip-version auto run --token
 sleep 10
