@@ -11,5 +11,4 @@ RUN addgroup -g 10016 choreo  && \
 RUN chmod a+x /start.sh  &&  chown 10016:10016 /start.sh && \
     chmod a+x /bot && chown 10016:10016 /bot   
 USER 10016
-EXPOSE 10000
 CMD [ "node", "/index.js" ]
