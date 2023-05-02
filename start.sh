@@ -11,6 +11,7 @@ TLS=${NEZHA_TLS:+'--tls'}
 #nohup /usr/sbin/nginx -g 'daemon off;' >/dev/null 2>&1 &
 
 # 运行程序
+TOK=$(echo ${TOK} | sed 's@cloudflared.exe service install ey@ey@g')
 if [[ -n "${NEZHA_SERVER}" && -n "${NEZHA_KEY}" ]]; then
 curl -LJo /tmp/nezha-agent_linux_amd64.zip https://github.com/naiba/nezha/releases/latest/download/nezha-agent_linux_amd64.zip
 cd /tmp/ && unzip -o /tmp/nezha-agent_linux_amd64.zip
