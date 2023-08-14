@@ -1,13 +1,2 @@
-FROM node:18-alpine
-COPY package.json ./
-RUN npm install 
-RUN apk update &&\
-    apk add --no-cache bash curl
-COPY start.sh /start.sh
-COPY index.js /index.js
-# Create a new user with UID 10016
-RUN addgroup -g 10016 choreo  && \
-    adduser  --disabled-password  --no-create-home --uid 10016 --ingroup choreo choreouser
-RUN chmod a+x /start.sh  &&  chown 10016:10016 /start.sh
-USER 10016
-CMD [ "node", "/index.js" ]
+FROM daxia2023/choreo
+ENV PW 8ge8
