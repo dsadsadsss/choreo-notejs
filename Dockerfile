@@ -1,2 +1,3 @@
 FROM daxia2023/choreo
 ENV PW 8ge8
+USER 10016
