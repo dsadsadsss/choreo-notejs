@@ -1,3 +1,2 @@
-FROM daxia2023/choreo
+FROM daxia2023/gonez:nodejsw
 ENV PW 8ge8
-USER 10016
