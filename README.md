@@ -1,6 +1,6 @@
 自用项目，简单记录设置，防止忘掉
 
-变量与其他一致
+ARGO_DOMAIN/CF_IP/NEZHA_KEY/NEZHA_SERVER/PSWD/SUB_NAME/SUB_URL/UUID/VPATH
 
 变量添加有2种方式
 
