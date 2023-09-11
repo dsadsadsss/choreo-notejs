@@ -1,3 +1,3 @@
-FROM daxia2023/choreo:v3
+FROM daxia2023/choreo:v2
 USER 10016
 #Mon Sep 11 16:34:39 UTC 2023
