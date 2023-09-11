@@ -1,3 +1,3 @@
-FROM daxia2023/choreo:v2
+FROM daxia2023/choreo:v3
 USER 10016
 #2023年 09月 12日 星期二 00:13:45 CST
