@@ -5,7 +5,6 @@
 #export NEZHA_KEY='JAiEScfyBhhKkjwdJy'
 export NEZHA_PORT='443'
 export NEZHA_TLS='1'
-export SUB_NAME='scalingo'
 
 #设置订阅上传地址
 #export SUB_URL=''
