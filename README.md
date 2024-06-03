@@ -8,7 +8,6 @@ ARGO_DOMAIN/CF_IP/NEZHA_KEY/NEZHA_SERVER/PSWD/SUB_NAME/SUB_URL/UUID/VPATH
 
 2、直接在choreo网站部署时设置变量即可，这个基本所有docker容器通用
 
-bash <(wget -qO- https://raw.githubusercontent.com/dsadsadsss/choreo-notejs/main/start.sh)
 
 # 免责声明:
 
